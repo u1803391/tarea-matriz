@@ -18,6 +18,7 @@ public class Matrices {
        int fila;
        int columna;
        double sumamatrices= 0;
+       double restamatrices= 0;
        
        
        System.out.println("Ingrese la cantidad de filas: ");
@@ -62,8 +63,23 @@ public class Matrices {
            }
            System.out.println("\n ");
        } 
+        System.out.println("La resta de las diagonales es: "+sumamatrices);
+        for(int i=0;i<fila;i++)
+       {
+           for(int j=0;j<columna;j++)
+           {
+               if(i == j)
+               {
+               restamatrices = restamatrices + v[i][j];
+               }
+               if(i + j == fila - 1 )
+               {
+                   restamatrices = restamatrices - v[i][j];
+               }
+           }
+       } 
        
-        System.out.println("La suma de las diagonales es: "+sumamatrices);
+        System.out.println("La resta de las diagonales es: "+restamatrices);
        
     }
     
